@@ -9,3 +9,7 @@ INITIALLY_SUSPENDED = TRUE
 COMMENT = '04 demo warehouse created through worksheet';
 
 SHOW WAREHOUSES;
+
+ALTER WAREHOUSE "04_demo_warehouse"
+SET MAX_CLUSTER_COUNT = 3;
+
