@@ -1,0 +1,23 @@
+USE ROLE SYSADMIN;
+
+CREATE WAREHOUSE IF NOT EXISTS "06_movies_wh"
+    WITH WAREHOUSE_SIZE = 'XSMALL'
+    AUTO_SUSPEND = 300
+    AUTO_RESUME = TRUE
+    INITIALLY_SUSPENDED = TRUE
+    COMMENT = 'Warehouse for movies DLT';
+
+SHOW WAREHOUSES;
+
+CREATE DATABASE IF NOT EXISTS "06_movies_db"
+    COMMENT = 'Database for movies DLT';
+
+SHOW DATABASES;
+
+CREATE SCHEMA IF NOT EXISTS "06_movies_db".staging
+    COMMENT = 'Schema for movies DLT';
+
+SHOW SCHEMAS IN DATABASE "06_movies_db";
+
+DESCRIBE DATABASE "06_movies_db";
+
