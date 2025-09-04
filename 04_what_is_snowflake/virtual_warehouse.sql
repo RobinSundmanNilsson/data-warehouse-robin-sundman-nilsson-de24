@@ -1,15 +1,15 @@
 SHOW WAREHOUSES;
 
-CREATE WAREHOUSE "04_demo_warehouse"
+CREATE WAREHOUSE demo_wh
 WITH
 WAREHOUSE_SIZE = 'X-Small'
 AUTO_SUSPEND = 300
 AUTO_RESUME = TRUE
 INITIALLY_SUSPENDED = TRUE
-COMMENT = '04 demo warehouse created through worksheet';
+COMMENT = 'Demo warehouse created through worksheet';
 
 SHOW WAREHOUSES;
 
-ALTER WAREHOUSE "04_demo_warehouse"
+ALTER WAREHOUSE demo_wh
 SET MAX_CLUSTER_COUNT = 3;
 

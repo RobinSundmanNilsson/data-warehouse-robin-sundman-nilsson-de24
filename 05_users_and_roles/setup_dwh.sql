@@ -4,13 +4,13 @@ SELECT CURRENT_ROLE();
 
 SELECT CURRENT_USER();
 
-CREATE WAREHOUSE IF NOT EXISTS "05_ice_cream_wh"
+CREATE WAREHOUSE IF NOT EXISTS dev_wh
     WITH WAREHOUSE_SIZE = 'XSMALL'
     AUTO_SUSPEND = 300
     AUTO_RESUME = TRUE
     INITIALLY_SUSPENDED = TRUE
-    COMMENT = "Warehouse for ice cream shop";
+    COMMENT = 'Warehouse for learning Snowflake';
 
 SHOW WAREHOUSES;
 
-USE WAREHOUSE "05_ice_cream_wh";
+USE WAREHOUSE dev_wh;

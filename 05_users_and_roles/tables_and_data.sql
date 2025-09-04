@@ -1,8 +1,8 @@
 USE ROLE ice_cream_writer;
 
-USE WAREHOUSE "05_ice_cream_wh";
+USE WAREHOUSE dev_wh;
 
-USE SCHEMA "05_ice_cream_db".PUBLIC;
+USE SCHEMA ice_cream_db.public;
 
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS flavors;

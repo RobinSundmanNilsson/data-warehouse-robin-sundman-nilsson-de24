@@ -1,16 +1,16 @@
 SHOW DATABASES;
 
-CREATE DATABASE IF NOT EXISTS "04_demo_database";
+CREATE DATABASE IF NOT EXISTS demo_database;
 
-USE DATABASE "04_demo_database";
+USE DATABASE demo_database;
 
 SHOW SCHEMAS;
 
-CREATE SCHEMA IF NOT EXISTS "04_demo_database".staging;
+CREATE SCHEMA IF NOT EXISTS demo_database.staging;
 
-SHOW SCHEMAS IN DATABASE "04_demo_database";
+SHOW SCHEMAS IN DATABASE demo_database;
 
-USE SCHEMA "04_demo_database".staging;
+USE SCHEMA demo_database.staging;
 
 CREATE TABLE IF NOT EXISTS customers (
     customer_id INT PRIMARY KEY,

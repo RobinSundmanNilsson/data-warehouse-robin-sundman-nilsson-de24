@@ -4,11 +4,12 @@ SELECT CURRENT_ROLE();
 
 SELECT CURRENT_USER();
 
-CREATE DATABASE IF NOT EXISTS "05_ice_cream_db";
+CREATE DATABASE IF NOT EXISTS ice_cream_db
+    COMMENT = 'Database for ice cream shop';
 
 SHOW DATABASES;
 
-USE DATABASE "05_ice_cream_db";
+USE DATABASE ice_cream_db;
 
 -- Create a table for ice cream flavors
 CREATE TABLE flavors (
