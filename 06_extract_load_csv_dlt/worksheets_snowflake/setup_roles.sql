@@ -8,6 +8,7 @@ USE ROLE SECURITYADMIN;
 -- GRANT ROLES TO USERS
 GRANT ROLE movies_dlt_role TO USER extract_loader;
 GRANT ROLE movies_reader_role TO USER robinsundmannilsson;
+GRANT ROLE movies_dlt_role TO USER robinsundmannilsson;
 
 -- GRANT PRIVILEGES TO ROLES
 GRANT USAGE ON WAREHOUSE dev_wh TO ROLE movies_dlt_role;
