@@ -1,0 +1,23 @@
+name: dbt_code
+
+profile: dbt_snowflake_modeling
+
+seed-paths: ["seeds"]
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+seeds:
+  # Builds seeds into '<your_schema_name>_raw'
+  dbt_snowflake_modeling:
+    +schema: raw
+
+models:
+  dbt_snowflake_modeling:
+    # Materialize staging models as views, and marts as tables
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
