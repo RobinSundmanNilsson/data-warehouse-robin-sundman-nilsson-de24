@@ -17,7 +17,17 @@ seeds:
 models:
   dbt_snowflake_modeling:
     # Materialize staging models as views, and marts as tables
-    staging:
-      +materialized: view
-    marts:
-      +materialized: table
+    +materialized: table
+
+    src:
+      +materialized: ephemeral
+      +schema: staging
+
+    dim:
+      +schema: warehouse
+
+    fct:
+      +schema: warehouse
+
+    mart:
+      +schema: marts
